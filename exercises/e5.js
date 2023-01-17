@@ -6,7 +6,11 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
-
+  const names = [];
+  for (let i = 0; i < array.length; i++) {
+    names.push(array[i].name);
+  }
+  return names; //isn't it more standard to use .map in these cases?
 }
 
 

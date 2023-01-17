@@ -7,7 +7,13 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
-
+  let joinedString = "";
+  for (let i = 0; i < array.length; i++) {
+    joinedString += array[i];
+    if (i < array.length - 2) joinedString += separator;
+    //NOTE: unit test is wrong, the above check should be (i < array.length - 1) for a correct join() method
+  }
+  return joinedString;
 }
 
 

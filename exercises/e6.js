@@ -5,7 +5,13 @@
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
-
+  const namesWithZeroBalance = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance === 0) {
+      namesWithZeroBalance.push(array[i].name);
+    }
+  }
+  return namesWithZeroBalance; //again, feels like a job for .filter
 }
 
 // === TEST YOURSELF ===

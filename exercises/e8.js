@@ -6,7 +6,13 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  const accountWithMaxBalance = [array[0]];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance > accountWithMaxBalance[0].balance) {
+      accountWithMaxBalance[0] = array[i];
+    }
+  }
+  return accountWithMaxBalance;
 }
 
 
